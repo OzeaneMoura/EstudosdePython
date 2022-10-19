@@ -1,0 +1,50 @@
+class SeresHumanos:
+    def __init__(self, nome, peso, idade, comendo=False, falando=False, dormindo=False):
+        self.nome=nome
+        self.peso=peso
+        self.idade=idade
+        self.comendo=comendo
+        self.falando=falando
+        self.dormindo=dormindo
+
+    def comer (self):
+        if self.comendo:
+            print(f" {self.nome} já tá comendo")
+        else:
+            print(f"{self.nome} foi comer")
+            self.comendo = True
+
+    def falar (self):
+        if self.falando:
+            print(f" {self.nome} já tá falando")
+        else:
+            print(f"{self.nome} foi falar")
+            self.falando = True
+
+    def dormir(self):
+        if self.dormindo:
+            print(f" {self.nome} já tá dormindo")
+        else:
+            print(f"{self.nome} foi dormir")
+            self.dormindo = True
+
+    def parar_de_comer (self):
+        if not self.comendo:
+            print(f"{self.nome} já não tá comendo")
+        else:
+            print(f"{self.nome} parou de comer")
+            self.comendo = False
+
+    def parar_de_falar (self):
+        if not self.falando:
+            print(f"{self.nome} já não tá falando")
+        else:
+            print(f"{self.nome} parou de falar")
+            self.falando = False
+
+    def parar_de_dormir (self):
+        if not self.dormindo:
+            print(f"{self.nome} já não tá dormindo")
+        else:
+            print(f"{self.nome} parou de dormir")
+            self.dormindo = False
