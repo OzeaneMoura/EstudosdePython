@@ -33,6 +33,7 @@ class SeresHumanos:
             print(f"{self.nome} já não tá comendo")
         else:
             print(f"{self.nome} parou de comer")
+          
             self.comendo = False
 
     def parar_de_falar (self):
@@ -48,3 +49,49 @@ class SeresHumanos:
         else:
             print(f"{self.nome} parou de dormir")
             self.dormindo = False
+
+
+class ContaBancaria:
+    def __init__(self, numero, saldo, nome, tipo, status=False):
+        self.numero=numero
+        self.saldo=saldo
+        self.nome=nome
+        self.tipo=tipo
+        self.status=status
+
+    def status(self):
+        if not self.status:
+            print(f"{self.nome} sua conta está inativa")
+        else:
+            print(f"{self.nome} parou de comer")
+            self.comendo = False
+
+    def depositar(self):
+        if self.sacando:
+        print("Impossivel depositar durante o saque")
+        else:
+        if self.depositando:
+        print("Você já está depositando")
+        else:
+        self.saldo += float(input("Qual o valor do deposito? R$: "))
+        self.depositando = True
+
+
+    def sacar(self):
+        if self.depositando:
+        print("Impossivel sacar durante o deposito")
+        else:
+        if self.sacando:
+            print(f"{self.nome} já está sacando")
+        elif self.saldo <= 0:
+            print(f"{self.nome} não existe saldo para sacar")
+        else:
+            valor=float(input(f" {self.nome} Qual o valor do saque? R$: "))
+        while>self.saldo:
+            valor=float(input(f"{self.nome} Saldo insuficiente para o valor informado. Tente outra vez"))
+            self.saldo-=valor
+
+
+
+
+
